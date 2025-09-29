@@ -172,3 +172,81 @@ footer {
     padding-top: 20px;
     text-align: center;
 }
+
+
+.popup {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--dark-gray);
+}
+
+.popup--show{
+    display: flex;
+}
+
+.accordion {
+    margin-bottom: 20px;
+}
+
+.accordion-item {
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: var(--light-gray);
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s 
+ease;
+}
+
+.accordion-header::after {
+    content: '+';
+    font-size: 20px;
+}
+
+.accordion-header.active::after {
+    content: '-';
+}
